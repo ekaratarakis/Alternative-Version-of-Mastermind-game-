@@ -144,14 +144,14 @@ int main()
 		while(count!=n) // while number of digits != n
 		{
 			count=0;
-    		cout<<"Give correct guess number.";
-    		cin>>guess;
-    		div=guess;
-    		while(div!=0)
-    		{
-     	 		div/=10;
-     	 		++count;
-    		}
+    			cout<<"Give correct guess number.";
+    			cin>>guess;
+    			div=guess;
+    			while(div!=0)
+    			{
+     	 			div/=10;
+     	 			++count;
+    			}
 		}
 		int flag=0; // flag enabled if the guess number has dublicates
 		char* guesstr;
@@ -177,14 +177,14 @@ int main()
 				toString(guesstr,guess,n); // calling the function tostring() in order to the secret number into string
 				div=guess;
 				while(div!=0) // counting the number of digits in the guess number 
-         		{
-            		div/=10;
-            		++count;
-         		} 
-         		for(i = 0; i<count-1; ++i)
-         		{
-         			if(guesstr[i]==guesstr[i+1])
          			{
+            				div/=10;
+            				++count;
+         			} 
+         			for(i = 0; i<count-1; ++i)
+         			{
+         				if(guesstr[i]==guesstr[i+1])
+         				{
 						flag=1; // dublicates found          					
 					}
 				}
@@ -201,17 +201,17 @@ int main()
 				toString(guesstr,guess,n);
 				div=guess;
 				while(div!=0)
-         		{
-            		div/=10;
-            		++count;
-         		}
-         		for(int i=0;i<count-1;++i)
-         		{
-    	    		if(guesstr[i]==guesstr[i+1])
-		    		{ 
-		       			flag=1;
-	        		}
-         		}
+         			{
+            				div/=10;
+            				++count;
+         			}
+         			for(int i=0;i<count-1;++i)
+         			{
+    	    				if(guesstr[i]==guesstr[i+1])
+		    			{ 
+		       				flag=1;
+	        			}
+         			}
 			}
 		}
 		else if(count==5 && (enable_duplicate==0 && flag==1)) // Similarly for n=5
@@ -227,7 +227,7 @@ int main()
 				while(div!=0)
 				{
 					div/=10;
-            		++count;
+            				++count;
 				}
 				for(i=0;i<count-1;i++)
 				{
